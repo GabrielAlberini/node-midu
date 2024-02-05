@@ -1,4 +1,4 @@
-import fs from "node:fs/promises";
+import fs from 'node:fs/promises'
 
 // Promise.all([
 //   fs.readFile("./clase-1/input.txt", "utf8"),
@@ -15,26 +15,26 @@ import fs from "node:fs/promises";
 //     console.log("Lectura terminada.");
 //   });
 
-const filesPath = ["./clase-1/input.txt", "./clase-1/input2.txt"];
+const filesPath = ['./clase-1/input.txt', './clase-1/input2.txt']
 
-console.time();
-console.log("-- COMENZANDO A LEER ARCHIVOS --");
+console.time()
+console.log('-- COMENZANDO A LEER ARCHIVOS --')
 
 const readFiles = async (files) => {
-  return await Promise.all(files.map((file) => fs.readFile(file, "utf8")));
-};
+  return await Promise.all(files.map((file) => fs.readFile(file, 'utf8')))
+}
 
 const main = async (files) => {
   try {
-    const data = await readFiles(files);
-    console.log("Data de primer texto:");
-    console.log("Data de segundo texto:");
-    console.timeEnd();
+    const data = await readFiles(files)
+    console.log('Data de primer texto:', data[0])
+    console.log('Data de segundo texto:', data[1])
+    console.timeEnd()
   } catch (error) {
-    console.log("Hubo un error :(");
+    console.log('Hubo un error :(')
   }
-};
+}
 
-main(filesPath);
+main(filesPath)
 
-console.log("-- TERMINANDO DE LEER ARCHIVOS --");
+console.log('-- TERMINANDO DE LEER ARCHIVOS --')
