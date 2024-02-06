@@ -1,0 +1,23 @@
+{
+  "name": "clase-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:1": "node --watch 1-http.mjs",
+    "dev:2": "node --watch 2-ruting.mjs",
+    "dev:3": "node --watch 3-express.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/eslint-parser": "^7.23.10",
+    "@babel/plugin-syntax-import-assertions": "^7.23.3",
+    "eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
